@@ -1,0 +1,26 @@
+.container{
+    width: 80vw;
+    max-width: 1340px;
+    margin: auto;
+    @include xs(){
+        width: 100vw;
+        padding: 0 25px;
+    }
+    @include sm(){
+        width: 100vw;
+        padding: 0 25px;
+    }
+    @include md(){
+        width: 100vw;
+        padding: 0 25px;
+    }
+    @include lg(){
+        width: 90vw;
+    }
+    @include xl(){
+
+    }
+    @include xxl(){
+
+    }
+}

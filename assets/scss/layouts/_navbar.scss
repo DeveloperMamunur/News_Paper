@@ -1,0 +1,42 @@
+
+nav.navbar{
+    height: 30px;
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        li{
+            height: 100%;
+            align-items: center;
+            margin-right: 15px;
+            white-space: nowrap;
+            a{
+                display: block;
+                font-size: 17px;
+                line-height: 27px;
+                padding: 3px 0;
+                color: var(--text-color);
+                &:hover{
+                    color: #5964f5;
+                    border-bottom: 4px solid #000;
+                }
+            }
+            &:nth-last-child{
+                margin-right: 0px;
+            }
+        }
+    }
+    @include xs(){
+        display: none;
+    }
+    @include sm(){
+        display: none;
+    }
+    @include md(){
+        display: none;
+    }
+}

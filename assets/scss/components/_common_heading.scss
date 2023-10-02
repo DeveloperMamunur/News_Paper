@@ -1,0 +1,93 @@
+.body{
+    position: relative;
+    z-index: 0;
+    box-sizing: border-box;
+    aside{
+        position: absolute;
+        width: 400px;
+        height: 100%;
+        background-color: aliceblue;
+        display: none;
+        z-index: 1100;
+        transition: width 5s ease-in-out;
+        @include custom_media(320px, 575px){
+            width: 300px;
+        }
+        @include custom_media(0, 320px){
+            width: 250px;
+        }
+        @include xxl(){
+            width: 550px;
+            padding-left: 50px;
+        }
+        .top_side{
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            margin-top: 20px;
+            margin-right: 20px;
+            cursor: pointer;
+            color: #545353;
+            span{
+                font-size: 30px;
+                font-weight: 700;
+            }
+            &:hover{
+                color: dodgerblue;
+            }
+        }
+        nav.side_navbar{
+            form{
+                padding: 10px;
+                margin-top: 10px;
+                margin-left: 20px;
+                line-height: 40px;
+                input[type=search]{
+                    width: 130px;
+                    box-sizing: border-box;
+                    border: 2px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    background-color: white;
+                    background-image: url('../images/searchicon.png');
+                    background-position: 10px 10px; 
+                    background-repeat: no-repeat;
+                    padding: 12px 10px 12px 40px;
+                    transition: width 0.4s ease-in-out;
+                    &:focus {
+                        width: 100%;
+                    }
+                }
+            }
+            ul{
+                padding: 0px;
+                margin: 25px 5px;
+                
+                li{
+                    
+                    margin: 0;
+                    padding: 10px;
+                    border-bottom: 1px solid #e2e2e2;
+                    &:first-child{
+                        border-top: 1px solid #e2e2e2;
+
+                    }
+                    
+                    a{
+                        display: inline;
+                        line-height: 30px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        padding: 7px 15px;
+                        color: #000;
+                        &:hover{
+                            color: dodgerblue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
